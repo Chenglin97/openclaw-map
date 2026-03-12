@@ -1,39 +1,91 @@
 <!DOCTYPE html>
-<html><head><meta charset='utf-8'><style>
+<html lang="zh"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenClaw 生态变现地图</title>
+<style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:#0f1117;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:36px;width:1360px;}
-.title{color:#fff;font-size:22px;font-weight:700;margin-bottom:5px;}
-.subtitle{color:#666;font-size:12px;margin-bottom:26px;}
+body{background:#0f1117;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:32px;max-width:1400px;margin:0 auto;}
+
+/* BANNER */
+.banner{background:linear-gradient(135deg,#0d1f35,#1a0d2e);border:1px solid #2a3555;border-radius:12px;padding:20px 24px;margin-bottom:28px;}
+.banner-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.banner-title{color:#fff;font-size:18px;font-weight:700;}
+.banner-time{color:#556;font-size:11px;white-space:nowrap;}
+.banner-insight{color:#cce;font-size:13.5px;line-height:1.6;}
+.banner-insight b{color:#fff;}
+
+/* TITLE */
+.title{color:#fff;font-size:24px;font-weight:700;margin-bottom:4px;}
+.subtitle{color:#556;font-size:12px;margin-bottom:24px;}
+
+/* TABLE */
 table{width:100%;border-collapse:collapse;font-size:12.5px;}
 thead tr{background:#161929;}
-thead th{color:#8899bb;font-weight:600;padding:12px 13px;text-align:left;border-bottom:2px solid #1e2235;white-space:nowrap;}
-tbody tr{border-bottom:1px solid #161929;}
+thead th{color:#7799bb;font-weight:600;padding:11px 12px;text-align:left;border-bottom:2px solid #1e2235;white-space:nowrap;}
+tbody tr{border-bottom:1px solid #161929;transition:background .12s;}
+tbody tr:hover{background:#13172a;}
 tbody tr:nth-child(even){background:#111420;}
-td{padding:11px 13px;color:#c8d4ee;vertical-align:top;line-height:1.5;}
-td small{color:#666;font-size:11px;display:block;margin-top:2px;}
+tbody tr:nth-child(even):hover{background:#13172a;}
+td{padding:10px 12px;color:#c0ccee;vertical-align:top;line-height:1.5;}
+td small{color:#556;font-size:11px;display:block;margin-top:2px;}
+
+/* TAGS */
 .tag{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:600;white-space:nowrap;}
 .tag-saas{background:#0d2847;color:#4daaff;}
 .tag-service{background:#20103a;color:#aa66ff;}
 .tag-app{background:#0d2d1e;color:#44cc77;}
 .tag-market{background:#2d1e05;color:#ffaa33;}
 .tag-tool{background:#2a1010;color:#ff6666;}
-.tag-content{background:#0d2030;color:#55aaee;}
 .tag-enterprise{background:#1a2810;color:#88ee44;}
-.stars{color:#f5c518;letter-spacing:0px;font-size:14px;}
+
+/* STARS */
+.stars{color:#f5c518;font-size:14px;}
+
+/* ARR */
 .arr{color:#44cc77;font-weight:700;}
 .arr-real{color:#66ffaa;font-weight:700;}
-.arr-real::after{content:'✓';font-size:10px;margin-left:3px;opacity:0.7;}
+.arr-real::after{content:' ✓';font-size:10px;opacity:0.7;}
+
+/* COSTS */
 .cost-low{color:#44cc77;}
 .cost-mid{color:#ffaa33;}
 .cost-high{color:#ff6666;}
+
+/* STATUS */
 .ok{color:#44cc77;font-weight:600;}
 .warn{color:#ffaa33;font-weight:600;}
 .dead{color:#ff5555;font-weight:600;}
-.section-label{background:#0a1520;color:#4488aa;font-size:11px;font-weight:700;padding:7px 13px;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid #1e2235;}
-</style></head><body>
 
-<div class='title'>🦀 OpenClaw 生态变现地图 v2</div>
-<div class='subtitle'>March 2026 · 实线=已验证 MRR · 虚线=社区估算 · 推荐指数 = 市场需求 × 利润率 × 竞争密度</div>
+/* SECTION */
+.section-label{background:#0a1520;color:#4488aa;font-size:11px;font-weight:700;padding:7px 12px;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid #1e2235;}
+
+/* LINKS */
+.co-link{color:#7ab3ff;text-decoration:none;}
+.co-link:hover{color:#aaccff;text-decoration:underline;}
+
+/* SOURCES */
+.sources{margin-top:20px;padding:14px 18px;background:#0a0f1c;border:1px solid #1a2035;border-radius:8px;}
+.sources-title{color:#556;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
+.sources-list{display:flex;flex-wrap:wrap;gap:8px;}
+.sources-list a{color:#4a7aaa;font-size:11px;text-decoration:none;background:#0d1a2a;padding:3px 9px;border-radius:12px;border:1px solid #1a2a3a;}
+.sources-list a:hover{color:#7aafee;}
+.sources-list span{color:#334;font-size:11px;background:#0d1218;padding:3px 9px;border-radius:12px;border:1px solid #1a2028;}
+.footer{margin-top:10px;color:#334;font-size:11px;}
+</style>
+</head><body>
+
+<!-- BANNER -->
+<div class="banner">
+  <div class="banner-header">
+    <div class="banner-title">📡 Latest Research Insight</div>
+    <div class="banner-time">Updated: March 12, 2026 — 11:59 AM PST</div>
+  </div>
+  <div class="banner-insight">🟡 <b>n8nclaw community clone</b> — 648 upvotes, 0.99 ratio on r/n8n. OpenClaw's moat = shell + browser access. A 'Why OpenClaw vs n8n' doc is needed.</div>
+</div>
+
+<div class="title">🦀 OpenClaw 生态变现地图</div>
+<div class="subtitle">March 2026 · ✓ = TrustMRR Stripe API 验证 · Auto-updated every 8h · Source links below</div>
 
 <table>
   <thead>
@@ -47,197 +99,154 @@ td small{color:#666;font-size:11px;display:block;margin-top:2px;}
       <th>启动成本</th>
       <th>推荐指数</th>
       <th>状态</th>
+      <th>Link ✓</th>
     </tr>
   </thead>
   <tbody>
 
-    <!-- HOSTING -->
-    <tr><td colspan='9' class='section-label'>🏠 托管 SaaS — 帮你跑 OpenClaw 实例</td></tr>
-    <tr>
-      <td><b>ClawHosters.com</b></td>
-      <td><span class='tag tag-saas'>托管 SaaS</span></td>
-      <td>个人 / 小团队</td>
-      <td>月订阅</td>
-      <td>€19–59 / 月</td>
-      <td class='arr'>$300K–1M</td>
-      <td class='cost-mid'>中（服务器 + DevOps）</td>
-      <td><span class='stars'>★★★★★</span></td>
-      <td class='ok'>✅ 在线</td>
-    </tr>
-    <tr>
-      <td><b>OpenClaw Pro</b><small>TrustMRR 验证</small></td>
-      <td><span class='tag tag-saas'>托管 SaaS</span></td>
-      <td>个人 / 开发者</td>
-      <td>月订阅（一键部署）</td>
-      <td>未公开</td>
-      <td class='arr-real'>$686K ARR</td>
-      <td class='cost-mid'>中（基础设施）</td>
-      <td><span class='stars'>★★★★★</span></td>
-      <td class='ok'>✅ 增速 2375%</td>
-    </tr>
-    <tr>
-      <td><b>Getclawspace.com</b></td>
-      <td><span class='tag tag-saas'>托管 SaaS</span></td>
-      <td>企业 / 团队</td>
-      <td>月订阅</td>
-      <td>未公开</td>
-      <td class='arr'>$100K–500K</td>
-      <td class='cost-mid'>中（服务器）</td>
-      <td><span class='stars'>★★★★☆</span></td>
-      <td class='ok'>✅ 在线</td>
-    </tr>
+  <tr><td colspan="10" class="section-label">🏠 托管 SaaS — 帮你跑 OpenClaw 实例</td></tr>
+  <tr>
+    <td><b><a href="https://clawhosters.com" target="_blank" class="co-link">ClawHosters.com</a></b></td>
+    <td><span class="tag tag-saas">托管 SaaS</span></td>
+    <td>个人 / 小团队</td><td>月订阅</td><td>€19–59 / 月</td>
+    <td class="arr">$300K–1M</td><td class="cost-mid">中（服务器 + DevOps）</td>
+    <td><span class="stars">★★★★★</span></td><td class="ok">✅ 在线</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td><b><a href="https://openclaw.pro" target="_blank" class="co-link">OpenClaw Pro</a></b><small>TrustMRR 验证</small></td>
+    <td><span class="tag tag-saas">托管 SaaS</span></td>
+    <td>个人 / 开发者</td><td>月订阅（一键部署）</td><td>未公开</td>
+    <td class="arr-real">$686K ARR</td><td class="cost-mid">中（基础设施）</td>
+    <td><span class="stars">★★★★★</span></td><td class="ok">✅ 增速 2375%</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td><b><a href="https://getclawspace.com" target="_blank" class="co-link">Getclawspace.com</a></b></td>
+    <td><span class="tag tag-saas">托管 SaaS</span></td>
+    <td>企业 / 团队</td><td>月订阅</td><td>未公开</td>
+    <td class="arr">$100K–500K</td><td class="cost-mid">中（服务器）</td>
+    <td><span class="stars">★★★★☆</span></td><td class="ok">✅ 在线</td>
+    <td>✅</td>
+  </tr>
 
-    <!-- SETUP SERVICES -->
-    <tr><td colspan='9' class='section-label'>🔧 安装服务 — 帮你把 OpenClaw 装好调好</td></tr>
-    <tr>
-      <td><b>MyClaw.tech</b><small>创始人 Leonidas</small></td>
-      <td><span class='tag tag-service'>安装服务</span></td>
-      <td>个人 / 专业人士</td>
-      <td>一次性 + 月维护</td>
-      <td>$599–899 装机<br>$299 / 月维护</td>
-      <td class='arr'>$500K–2M</td>
-      <td class='cost-low'>低（人力为主）</td>
-      <td><span class='stars'>★★★★★</span></td>
-      <td class='ok'>✅ 在线</td>
-    </tr>
-    <tr>
-      <td><b>Freelancer</b><small>Upwork / Fiverr</small></td>
-      <td><span class='tag tag-service'>安装服务</span></td>
-      <td>个人</td>
-      <td>按单收费</td>
-      <td>$30–200 / 单</td>
-      <td class='arr'>$20K–80K / 人</td>
-      <td class='cost-low'>极低</td>
-      <td><span class='stars'>★★★☆☆</span></td>
-      <td class='ok'>✅ 持续</td>
-    </tr>
+  <tr><td colspan="10" class="section-label">🔧 安装服务 — 帮你把 OpenClaw 装好调好</td></tr>
+  <tr>
+    <td><b><a href="https://myclaw.tech" target="_blank" class="co-link">MyClaw.tech</a></b><small>创始人 Leonidas</small></td>
+    <td><span class="tag tag-service">安装服务</span></td>
+    <td>个人 / 专业人士</td><td>一次性 + 月维护</td><td>$599–899 装机<br>$299 / 月维护</td>
+    <td class="arr">$500K–2M</td><td class="cost-low">低（人力为主）</td>
+    <td><span class="stars">★★★★★</span></td><td class="ok">✅ 在线</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td><b><a href="https://www.upwork.com/" target="_blank" class="co-link">Freelancer</a></b><small>Upwork / Fiverr</small></td>
+    <td><span class="tag tag-service">安装服务</span></td>
+    <td>个人</td><td>按单收费</td><td>$30–200 / 单</td>
+    <td class="arr">$20K–80K / 人</td><td class="cost-low">极低</td>
+    <td><span class="stars">★★★☆☆</span></td><td class="ok">✅ 持续</td>
+    <td>⚠️</td>
+  </tr>
 
-    <!-- DESKTOP CLIENT -->
-    <tr><td colspan='9' class='section-label'>💻 桌面客户端 — 一键安装器</td></tr>
-    <tr>
-      <td><b>EasyClaw.app</b></td>
-      <td><span class='tag tag-app'>桌面客户端</span></td>
-      <td>Mac 用户</td>
-      <td>Freemium + 云订阅</td>
-      <td>免费试用 + 付费云端</td>
-      <td class='arr'>$50K–300K</td>
-      <td class='cost-mid'>中（Rust 开发）</td>
-      <td><span class='stars'>★★★★☆</span></td>
-      <td class='ok'>✅ 在线</td>
-    </tr>
+  <tr><td colspan="10" class="section-label">💻 桌面客户端 — 一键安装器</td></tr>
+  <tr>
+    <td><b><a href="https://easyclaw.app" target="_blank" class="co-link">EasyClaw.app</a></b></td>
+    <td><span class="tag tag-app">桌面客户端</span></td>
+    <td>Mac 用户</td><td>Freemium + 云订阅</td><td>免费试用 + 付费云端</td>
+    <td class="arr">$50K–300K</td><td class="cost-mid">中（Rust 开发）</td>
+    <td><span class="stars">★★★★☆</span></td><td class="ok">✅ 在线</td>
+    <td>✅</td>
+  </tr>
 
-    <!-- SKILLS MARKET -->
-    <tr><td colspan='9' class='section-label'>🛒 Skills 市场 / 平台</td></tr>
-    <tr>
-      <td><b>ClawHub.ai</b></td>
-      <td><span class='tag tag-market'>Skills 市场</span></td>
-      <td>所有 OpenClaw 用户</td>
-      <td>平台抽成 / 付费 Skill</td>
-      <td>未公开</td>
-      <td class='arr'>$200K–2M</td>
-      <td class='cost-high'>高（平台建设）</td>
-      <td><span class='stars'>★★★★☆</span></td>
-      <td class='ok'>✅ 在线</td>
-    </tr>
+  <tr><td colspan="10" class="section-label">🛒 Skills 市场 / 平台</td></tr>
+  <tr>
+    <td><b><a href="https://clawhub.ai" target="_blank" class="co-link">ClawHub.ai</a></b></td>
+    <td><span class="tag tag-market">Skills 市场</span></td>
+    <td>所有 OpenClaw 用户</td><td>平台抽成 / 付费 Skill</td><td>未公开</td>
+    <td class="arr">$200K–2M</td><td class="cost-high">高（平台建设）</td>
+    <td><span class="stars">★★★★☆</span></td><td class="ok">✅ 在线</td>
+    <td>✅</td>
+  </tr>
 
-    <!-- ENTERPRISE SPECIALIZED AGENTS -->
-    <tr><td colspan='9' class='section-label'>🏢 企业定制 Agent — 面向 B2B 的垂直专属 Agent</td></tr>
-    <tr>
-      <td><b>DM Champ</b><small>TrustMRR 验证</small></td>
-      <td><span class='tag tag-enterprise'>企业定制</span></td>
-      <td>企业销售团队</td>
-      <td>SaaS + 白标授权</td>
-      <td>$99–499 / 月 / 座席<br>白标转售</td>
-      <td class='arr-real'>$2.2M ARR</td>
-      <td class='cost-mid'>中</td>
-      <td><span class='stars'>★★★★★</span></td>
-      <td class='ok'>✅ 在线</td>
-    </tr>
-    <tr>
-      <td><b>BookedIn.ai</b><small>TrustMRR 验证</small></td>
-      <td><span class='tag tag-enterprise'>企业定制</span></td>
-      <td>中介 / 诊所 / 服务业</td>
-      <td>SaaS 月订阅</td>
-      <td>未公开</td>
-      <td class='arr-real'>$678K ARR</td>
-      <td class='cost-mid'>中</td>
-      <td><span class='stars'>★★★★★</span></td>
-      <td class='ok'>✅ 在线（待售）</td>
-    </tr>
-    <tr>
-      <td><b>AI Interview Copilot</b><small>TrustMRR 验证</small></td>
-      <td><span class='tag tag-enterprise'>企业定制</span></td>
-      <td>求职者 / HR / 招聘</td>
-      <td>SaaS 订阅</td>
-      <td>未公开</td>
-      <td class='arr-real'>$512K ARR</td>
-      <td class='cost-mid'>中</td>
-      <td><span class='stars'>★★★★☆</span></td>
-      <td class='warn'>🔄 待售</td>
-    </tr>
-    <tr>
-      <td><b>BuildMyAgent.io</b><small>TrustMRR 验证</small></td>
-      <td><span class='tag tag-enterprise'>企业定制</span></td>
-      <td>Agency / 企业</td>
-      <td>平台 + 定制服务</td>
-      <td>未公开</td>
-      <td class='arr-real'>$530K ARR</td>
-      <td class='cost-mid'>中（产品开发）</td>
-      <td><span class='stars'>★★★★☆</span></td>
-      <td class='warn'>🔄 待售</td>
-    </tr>
-    <tr>
-      <td><b>AI Marketing Dashboard</b><small>r/openclaw 案例</small></td>
-      <td><span class='tag tag-enterprise'>企业定制</span></td>
-      <td>中小企业 Marketing</td>
-      <td>SaaS 分层定价</td>
-      <td>$29–199 / 月</td>
-      <td class='arr'>$50K–500K</td>
-      <td class='cost-low'>低（solo 构建）</td>
-      <td><span class='stars'>★★★★☆</span></td>
-      <td class='ok'>✅ 在线</td>
-    </tr>
-    <tr>
-      <td><b>AI 安装 Agency</b><small>为企业部署 + 运维</small></td>
-      <td><span class='tag tag-enterprise'>企业定制</span></td>
-      <td>中小企业</td>
-      <td>项目制 + 月维护</td>
-      <td>$1K–5K 项目<br>$500–2K / 月维护</td>
-      <td class='arr'>$100K–1M</td>
-      <td class='cost-low'>极低</td>
-      <td><span class='stars'>★★★★★</span></td>
-      <td class='ok'>✅ 大量涌现中</td>
-    </tr>
+  <tr><td colspan="10" class="section-label">🏢 企业定制 Agent — 面向 B2B 的垂直专属 Agent</td></tr>
+  <tr>
+    <td><b><a href="https://trustmrr.com/startup/dm-champ" target="_blank" class="co-link">DM Champ</a></b><small>TrustMRR 验证</small></td>
+    <td><span class="tag tag-enterprise">企业定制</span></td>
+    <td>企业销售团队</td><td>SaaS + 白标授权</td><td>$99–499 / 月 / 座席<br>白标转售</td>
+    <td class="arr-real">$2.2M ARR</td><td class="cost-mid">中</td>
+    <td><span class="stars">★★★★★</span></td><td class="ok">✅ 在线</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td><b><a href="https://trustmrr.com/startup/bookedin" target="_blank" class="co-link">BookedIn.ai</a></b><small>TrustMRR 验证</small></td>
+    <td><span class="tag tag-enterprise">企业定制</span></td>
+    <td>中介 / 诊所 / 服务业</td><td>SaaS 月订阅</td><td>未公开</td>
+    <td class="arr-real">$678K ARR</td><td class="cost-mid">中</td>
+    <td><span class="stars">★★★★★</span></td><td class="ok">✅ 在线（待售）</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td><b><a href="https://trustmrr.com/startup/ai-interview-copilot" target="_blank" class="co-link">AI Interview Copilot</a></b><small>TrustMRR 验证</small></td>
+    <td><span class="tag tag-enterprise">企业定制</span></td>
+    <td>求职者 / HR / 招聘</td><td>SaaS 订阅</td><td>未公开</td>
+    <td class="arr-real">$512K ARR</td><td class="cost-mid">中</td>
+    <td><span class="stars">★★★★☆</span></td><td class="warn">🔄 待售</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td><b><a href="https://trustmrr.com/startup/buildmyagent-io" target="_blank" class="co-link">BuildMyAgent.io</a></b><small>TrustMRR 验证</small></td>
+    <td><span class="tag tag-enterprise">企业定制</span></td>
+    <td>Agency / 企业</td><td>平台 + 定制服务</td><td>未公开</td>
+    <td class="arr-real">$530K ARR</td><td class="cost-mid">中（产品开发）</td>
+    <td><span class="stars">★★★★☆</span></td><td class="warn">🔄 待售</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td><b>AI Marketing Dashboard</b><small>r/openclaw 案例</small></td>
+    <td><span class="tag tag-enterprise">企业定制</span></td>
+    <td>中小企业 Marketing</td><td>SaaS 分层定价</td><td>$29–199 / 月</td>
+    <td class="arr">$50K–500K</td><td class="cost-low">低（solo 构建）</td>
+    <td><span class="stars">★★★★☆</span></td><td class="ok">✅ 在线</td>
+    <td>—</td>
+  </tr>
+  <tr>
+    <td><b>AI 安装 Agency</b><small>为企业部署 + 运维</small></td>
+    <td><span class="tag tag-enterprise">企业定制</span></td>
+    <td>中小企业</td><td>项目制 + 月维护</td><td>$1K–5K 项目<br>$500–2K / 月维护</td>
+    <td class="arr">$100K–1M</td><td class="cost-low">极低</td>
+    <td><span class="stars">★★★★★</span></td><td class="ok">✅ 大量涌现中</td>
+    <td>—</td>
+  </tr>
 
-    <!-- MANAGEMENT TOOLS -->
-    <tr><td colspan='9' class='section-label'>🎛️ 管理工具 / UX 层</td></tr>
-    <tr>
-      <td><b>SwarmClaw / Claworc</b></td>
-      <td><span class='tag tag-tool'>管理工具</span></td>
-      <td>多 Agent 用户</td>
-      <td>SaaS 订阅</td>
-      <td>未公开</td>
-      <td class='arr'>$0–50K</td>
-      <td class='cost-mid'>中</td>
-      <td><span class='stars'>★★★☆☆</span></td>
-      <td class='warn'>⚠️ 早期</td>
-    </tr>
-    <tr>
-      <td><b>Mimora</b></td>
-      <td><span class='tag tag-tool'>UX 层扩展</span></td>
-      <td>个人用户</td>
-      <td>扩展付费</td>
-      <td>未公开</td>
-      <td class='arr'>—</td>
-      <td class='cost-mid'>中（3D 开发）</td>
-      <td><span class='stars'>★★☆☆☆</span></td>
-      <td class='dead'>❌ 疑似停运</td>
-    </tr>
+  <tr><td colspan="10" class="section-label">🎛️ 管理工具 / UX 层</td></tr>
+  <tr>
+    <td><b>SwarmClaw / Claworc</b></td>
+    <td><span class="tag tag-tool">管理工具</span></td>
+    <td>多 Agent 用户</td><td>SaaS 订阅</td><td>未公开</td>
+    <td class="arr">$0–50K</td><td class="cost-mid">中</td>
+    <td><span class="stars">★★★☆☆</span></td><td class="warn">⚠️ 早期</td>
+    <td>—</td>
+  </tr>
+  <tr>
+    <td><b>Mimora</b></td>
+    <td><span class="tag tag-tool">UX 层扩展</span></td>
+    <td>个人用户</td><td>扩展付费</td><td>未公开</td>
+    <td class="arr">—</td><td class="cost-mid">中（3D 开发）</td>
+    <td><span class="stars">★★☆☆☆</span></td><td class="dead">❌ 疑似停运</td>
+    <td>—</td>
+  </tr>
 
   </tbody>
 </table>
 
-<div style='margin-top:14px;color:#444;font-size:11px;'>
-  ✓ 标注 = TrustMRR Stripe/LemonSqueezy API 验证真实 MRR（2026-03-12 数据）· 其余为社区估算
+<!-- SOURCES -->
+<div class="sources">
+  <div class="sources-title">📚 Research Sources</div>
+  <div class="sources-list"><a href="https://reddit.com/r/openclaw" target="_blank">r/openclaw</a><a href="https://trustmrr.com" target="_blank">TrustMRR Leaderboard</a><a href="https://clawhosters.com" target="_blank">ClawHosters.com</a><a href="https://myclaw.tech" target="_blank">MyClaw.tech</a><a href="https://easyclaw.app" target="_blank">EasyClaw.app</a><a href="https://getclawspace.com" target="_blank">Getclawspace.com</a><a href="https://clawhub.ai" target="_blank">ClawHub.ai</a><a href="https://reddit.com/r/openclaw/comments/1rfki9k" target="_blank">r/openclaw Ecosystem Map post</a><a href="https://reddit.com/r/openclaw/comments/1r5ch5g" target="_blank">r/openclaw Production Automations post</a><span>MEMORY.md (OpenClaw Product Intelligence)</span></div>
 </div>
+
+<div class="footer">
+  ✓ = TrustMRR Stripe/LemonSqueezy API 验证真实 MRR · 其余为社区估算 · Last updated: March 12, 2026 — 11:59 AM PST
+</div>
+
 </body></html>
